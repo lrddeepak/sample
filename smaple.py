@@ -1,4 +1,6 @@
 from bottle import Bottle, run
+import os
+
 app =Bottle()
 
 
@@ -6,4 +8,5 @@ app =Bottle()
 def index():
     return "Hi there"
 
-run(app, host='0.0.0.0', port='5000',debug = True)
+PORT = int(os.environ.get('D_PORT', 80))
+run(app, host='0.0.0.0', port=PORT, debug=True)
