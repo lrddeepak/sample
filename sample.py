@@ -8,6 +8,6 @@ app=Bottle()
 def index():
     return "Hi there"
 
-PORT = int(os.environ.get('PORT',  '5000'))
+PORT = int(os.environ.get('D_PORT',  '80'))
 
 app.run(host='0.0.0.0', port=PORT, debug=True)
